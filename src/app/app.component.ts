@@ -24,7 +24,7 @@ export class AppComponent {
     if(pattern.test(value))
       return true;
     else
-      return false
+      return false;
   }
 
   addStudentEntry(): Boolean{
@@ -34,7 +34,7 @@ export class AppComponent {
     const studNumberPattern = /^[0-9]+$/;
     const studYearPattern = /^[1-5]+$/;
 
-    if(this.checkPatterns(this.studNo,studNumberPattern) && this.checkPatterns(this.studFname,stringPattern)
+    if(this.checkPatterns(this.studNo, studNumberPattern) && this.checkPatterns(this.studFname,stringPattern)
     && this.checkPatterns(this.studLname, stringPattern) && this.checkPatterns(this.studProg, stringPattern)
     && this.checkPatterns(this.studYr, studYearPattern)){
       
@@ -43,7 +43,7 @@ export class AppComponent {
         studFirstName: this.studFname,
         studLastName: this.studLname,
         studProgram: this.studProg,
-        studYear: this.studYr,
+        studYear: this.studYr
       };
 
       this.studentCollection.push(this.studentRecord);
@@ -52,7 +52,7 @@ export class AppComponent {
 
     }
     else{
-      this.messages = "Errors have been encountered and therefore cannot continue to process requested operation.";
+      this.messages = 'Errors have been encountered and therefore cannot continue to process requested operation.';
       return false;
     }
   }
